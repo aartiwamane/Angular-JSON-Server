@@ -1,0 +1,77 @@
+<div class="container py-5 text-light">
+  <h2 class="text-center mb-4"> Restaurant Dashboard</h2>
+
+  <div class="text-end mb-3">
+    <button (click)="clickAddResto()" class="btn btn-primary"> Add Restaurant</button>
+  </div>
+
+  <!-- Restaurant Form -->
+  <div class="card p-4 bg-dark-subtle" *ngIf="showAdd || showBtn">
+    <form [formGroup]="formValue" class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input formControlName="name" type="text" class="form-control" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Mobile</label>
+        <input formControlName="mobile" type="text" class="form-control" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Address</label>
+        <input formControlName="address" type="text" class="form-control" />
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Services</label>
+        <input formControlName="services" type="text" class="form-control" />
+      </div>
+
+      <div class="col-12 text-end">
+        <button *ngIf="showAdd" (click)="addRestaurent()" type="button" class="btn btn-success me-2">Save</button>
+        <button *ngIf="showBtn" (click)="updateResto()" type="button" class="btn btn-warning me-2">Update</button>
+        <button (click)="formValue.reset(); showAdd=false; showBtn=false" type="button" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Restaurant Table -->
+  <div class="container">
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Restaurent Id</th>
+        <th>Restaurent Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Services</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resto of allRestaurentData">
+        <td>{{ resto.id }}</td>
+        <td>{{ resto.name }}</td>
+        <td>{{ resto.email }}</td>
+        <td>{{ resto.address }}</td>
+        <td>{{ resto.mobile }}</td>
+        <td>{{ resto.services }}</td>
+        <td>
+          <button class="btn btn-info" (click)="onEditResto(resto)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteResto(resto)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </div>
+
