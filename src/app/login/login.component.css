@@ -1,41 +1,95 @@
-/* login.component.css */
-
+/* Login Container Background */
 .login-container {
-  background: linear-gradient( #004d7a);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #001f3f, #005f73, #0a9396, #94d2bd);
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+  padding: 20px;
 }
 
 @keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Login Card */
 .login-card {
   width: 100%;
-  max-width: 400px;
-  background-color: white;
-  border-radius: 1rem;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+  padding: 40px 35px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.text-primary {
-  color: #007bff;
+.login-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.30);
 }
 
+/* Heading */
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004d7a;
+  margin-bottom: 25px;
+}
+
+/* Input Styling */
 input.form-control {
-  border-radius: 0.5rem;
+  border-radius: 10px;
   font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #b5c4d6;
+  transition: border-color 0.3s;
 }
 
+input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Styling */
 button.btn-primary {
-  background-color: #007bff;
+  width: 100%;
+  background: linear-gradient(90deg, #007bff, #00b4d8);
   border: none;
-  font-size: 1.1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: 0.3s ease;
 }
 
 button.btn-primary:hover {
-  background-color: #0056b3;
+  background: linear-gradient(90deg, #0056b3, #0088a8);
+  transform: scale(1.03);
+}
+
+/* Register / Extra Links */
+.login-card a {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 30px 25px;
+  }
+  .login-title {
+    font-size: 1.7rem;
+  }
 }
