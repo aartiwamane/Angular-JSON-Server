@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     }
 
     console.log(this.loginForm.value);
-    alert("Marvellous logged in successfully");
+    alert("User logged in successfully");
     this._router.navigate(['/restaurent']);
     this.loginForm.reset();
   }
