@@ -6,7 +6,7 @@ import { ResturantDashComponent } from './resturant-dash/resturant-dash.componen
 
 const routes: Routes = [
   {
-    path : '',redirectTo : 'login',pathMatch: 'full'
+    path : '',redirectTo : 'signup',pathMatch: 'full'
   },
   {
     path: 'login', component:LoginComponent 
