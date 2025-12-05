@@ -9,7 +9,8 @@ import { RestaurentData } from './resturant-dash/restaurent.model';
 })
 export class SharedService {
 
-  private apiURL = 'http://localhost:3000/posts';
+  // private apiURL = 'http://localhost:3000/posts';
+  private apiURL = 'https://6933038de5a9e342d2719f8f.mockapi.io/api/posts';
 
   constructor(private _http: HttpClient) {}
 

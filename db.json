@@ -1,15 +1,15 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "Aahar",
+      "id": "1",
+      "name": "Aahar pure veg",
       "email": "Aahar@gmail.com",
       "mobile": 9090909090,
       "address": "Pune",
       "services": "Pure-Veg Thali Services"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Grand Hayat",
       "address": "Pune",
       "email": "Hayat@gmail.com",
@@ -17,7 +17,7 @@
       "mobile": 9090909090
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Le Meridian",
       "address": "Pune Mumbai highway",
       "email": "Meridian@gmail.com",
@@ -25,7 +25,7 @@
       "mobile": 9999999999
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Farmer's Kitchen",
       "address": "Bhosari",
       "email": "farmerskitchen@gmail.com",
@@ -33,7 +33,7 @@
       "mobile": 7974532167
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Atithi- Pure Veg",
       "address": "Moshi-Aalandi Road",
       "email": "atithiveg@gmail.com",
@@ -41,12 +41,12 @@
       "mobile": 8956341690
     },
     {
-      "id": 6,
-      "name": "Vaishali",
-      "email": "vaibhav@gmail.com",
+      "id": "da0a",
+      "name": "vaishali",
+      "email": "vaishali@gmail.com",
       "mobile": "1234567890",
-      "address": "mumbai",
-      "services": "Break-Fast Dishes"
+      "address": "pune",
+      "services": "breakfast"
     }
   ],
   "signup": [
