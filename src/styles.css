@@ -1,0 +1,16 @@
+.header-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.app-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f4c75; /* Professional theme */
+}
+
+.tagline {
+  margin-top: -5px;
+  font-size: 15px;
+  color: #555;
+}
