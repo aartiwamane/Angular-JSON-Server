@@ -17,3 +17,7 @@
   margin-bottom: 0;     
 
 }
+.container {
+  margin-top: 0;     /* reduces unwanted white space above the table */
+  padding-top: 0;
+}
