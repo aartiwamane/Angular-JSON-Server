@@ -1,23 +1,32 @@
-.header-container {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
+/* 1) Reset heading & tagline spacing (highest priority) */
+.header-container,
+.header-container * {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.app-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #0A80FF; 
+/* ensure title and tagline are tight */
+.app-title { margin: 8px 0 4px 0 !important; }
+.tagline   { margin: 0 0 6px 0 !important; font-size: 15px; }
+
+/* 2) Remove top spacing from the main content wrapper */
+.container, .table-container, .content-wrapper {
+  margin-top: 6px !important;
+  padding-top: 0 !important;
 }
 
-.tagline {
-  margin-top: -5px;
-  font-size: 15px;
-  color: #ADCFFF;
-  margin-bottom: 0;     
-
+/* 3) If your table sits inside a card, reduce its top padding */
+.table-container {
+  padding-top: 12px !important;
+  padding-bottom: 20px !important;
 }
-.container {
-  margin-top: 0;     /* reduces unwanted white space above the table */
-  padding-top: 0;
+
+/* 4) Sometimes Bootstrap .row or .mt classes add space — override common ones */
+.mt-4, .mb-4, .pt-4, .pb-4 { margin: 0 !important; padding: 0 !important; }
+
+/* 5) If router-outlet wrapper has spacing, collapse it too */
+router-outlet, .router-outlet, .page-wrapper {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
 }
